@@ -113,6 +113,14 @@ app.get('/groups', (req, res) => {
     })
 })
 
+app.get('/account', (req, res) => {
+  res.json({
+    id: 0,
+    name: "Paweł Nowak",
+    friends: exampleParticipants,
+  })
+})
+
 
 const server = app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
