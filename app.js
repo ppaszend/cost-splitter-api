@@ -41,6 +41,73 @@ app.get('/groups', (req, res) => {
                     { red: 107/255, green: 215/255, blue: 190/255 }
                 ],
                 type: GroupType.GROUP
+            },
+            {
+                id: 1,
+                title: 'Zakopane Trip \'25',
+                expenses: [
+                    {
+                        id: 0,
+                        date: +(new Date('2025-04-21T00:00:00+0000')),
+                        title: 'Airbnb',
+                        paidBy: exampleParticipants[0],
+                        total: 1149.99,
+                        usedBy: exampleParticipants.map((participant) => ({ participant, amount: 383.33 })),
+                        settlement: [],
+                        currency: "PLN"
+                    }
+                ],
+                participants: exampleParticipants,
+                backgroundGradientColors: [
+                    { red: 163/255, green: 115/255, blue: 219/255 },
+                    { red: 107/255, green: 215/255, blue: 190/255 }
+                ],
+                type: GroupType.GROUP
+            },
+            {
+                id: 2,
+                title: 'Trondheim Trip \'25',
+                expenses: [
+                    {
+                        id: 0,
+                        date: +(new Date('2025-04-21T00:00:00+0000')),
+                        title: 'Airbnb',
+                        paidBy: exampleParticipants[0],
+                        total: 1149.99,
+                        usedBy: exampleParticipants.map((participant) => ({ participant, amount: 383.33 })),
+                        settlement: [],
+                        currency: "PLN"
+                    },
+                    {
+                        id: 1,
+                        date: +(new Date('2025-04-21T00:00:00+0000')),
+                        title: 'Flight tickets',
+                        paidBy: exampleParticipants[0],
+                        total: 900,
+                        usedBy: exampleParticipants.map((participant) => ({ participant, amount: 300 })),
+                        settlement: [],
+                        currency: "PLN"
+                    },
+                    {
+                        id: 2,
+                        date: +(new Date('2025-04-21T00:00:00+0000')),
+                        title: 'Pizza',
+                        paidBy: exampleParticipants[0],
+                        total: 200,
+                        usedBy: [
+                            { participant: exampleParticipants[0], amount: 120 },
+                            { participant: exampleParticipants[1], amount: 80 },
+                        ],
+                        settlement: [],
+                        currency: "PLN"
+                    },
+                ],
+                participants: exampleParticipants,
+                backgroundGradientColors: [
+                    { red: 163/255, green: 115/255, blue: 219/255 },
+                    { red: 107/255, green: 215/255, blue: 190/255 }
+                ],
+                type: GroupType.GROUP
             }
         ]
     })
