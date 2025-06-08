@@ -26,7 +26,7 @@ app.get('/groups', (req, res) => {
                 expenses: [
                     {
                         id: 0,
-                        date: '2025-04-21T00:00:00+0000',
+                        date: +(new Date('2025-04-21T00:00:00+0000')),
                         title: 'Airbnb',
                         paidBy: exampleParticipants[0],
                         total: 1149.99,
